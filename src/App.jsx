@@ -1,6 +1,6 @@
 import Navbar from "./components/Navbar";
 import { useState } from "react";
-import StepOne from "./components/stepOne";
+import StepOne from "./components/StepOne";
 import StepTwo from "./components/StepTwo";
 import stepDataObj from "./utils/stepDataObj";
 
