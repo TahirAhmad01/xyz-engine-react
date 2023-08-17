@@ -1,22 +1,12 @@
 import React from "react";
 import StepInputTxt from "./StepInputTxt";
+import StepBtn from "./stepBtn";
 
-function StepOne({ handleStep, stepData, setStepData }) {
+function StepOne({ handleStep, stepData, update }) {
   const handleSubmit = (e) => {
     e.preventDefault();
     handleStep(true);
   };
-
-  const update = (e) => {
-    const { value, name } = e.target;
-    console.log(name);
-
-    setStepData({
-      ...stepData,
-      [name]: value,
-    });
-  };
-
 
   return (
     <div className="w-[600px] bg-red-200 rounded-lg overflow-hidden shadow-md">
@@ -25,30 +15,30 @@ function StepOne({ handleStep, stepData, setStepData }) {
         <div className="bg-white p-3 ">
           <StepInputTxt
             name="projectName"
-            valName="Project Name"
+            inpName="Project Name"
             value={stepData.projectName}
             onChange={update}
           />
           <StepInputTxt
             name="projectDes"
-            valName="Project Description"
+            inpName="Project Description"
             value={stepData.projectDes}
             onChange={update}
           />
           <StepInputTxt
             name="client"
-            valName="client"
+            inpName="client"
             value={stepData.client}
             onChange={update}
           />
           <StepInputTxt
             name="contractor"
-            valName="Contractor"
+            inpName="Contractor"
             value={stepData.contractor}
             onChange={update}
           />
           <div className="pt-5 text-end">
-            <button className="py-3 px-9 rounded-md border">Next</button>
+            <StepBtn name="Next" />
           </div>{" "}
         </div>
       </form>

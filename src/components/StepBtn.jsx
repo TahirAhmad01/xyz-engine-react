@@ -1,10 +1,10 @@
 import React from "react";
 
-function StepBtn() {
+function StepBtn({ name }) {
   return (
-    <div>
-      <div></div>
-    </div>
+    <button className="py-3 px-9 rounded-md border" type="submit">
+      {name}
+    </button>
   );
 }
 

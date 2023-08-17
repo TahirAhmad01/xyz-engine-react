@@ -5,9 +5,20 @@ import StepTwo from "./components/StepTwo";
 import stepDataObj from "./utils/stepDataObj";
 
 function App() {
-  const [stepOneComplete, setStepOneComplete] = useState(false);
+  const [stepOneComplete, setStepOneComplete] = useState(true);
   const [stepData, setStepData] = useState(stepDataObj);
+
   console.log(stepData);
+
+  const updateInp = (e) => {
+    const { value, name } = e.target;
+    console.log(name);
+
+    setStepData({
+      ...stepData,
+      [name]: value,
+    });
+  };
 
   return (
     <>
@@ -18,12 +29,13 @@ function App() {
             <StepOne
               handleStep={setStepOneComplete}
               stepData={stepData}
-              setStepData={setStepData}
+              update={updateInp}
             />
           ) : (
             <StepTwo
               handleStep={setStepOneComplete}
               stepData={stepData}
+              update={updateInp}
               setStepData={setStepData}
             />
           )}

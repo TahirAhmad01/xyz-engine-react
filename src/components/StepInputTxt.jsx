@@ -1,6 +1,6 @@
 import React from "react";
 
-function StepInputTxt({ value, name, valName, onChange}) {
+function StepInputTxt({ value, name, inpName, onChange}) {
   
 
   return (
@@ -9,7 +9,7 @@ function StepInputTxt({ value, name, valName, onChange}) {
         htmlFor="name"
         className="block pb-1 text-sm capitalize font-semibold text-gray-500"
       >
-        {valName || "Name"}
+        {inpName || "Name"}
       </label>
       <input
         type="text"
@@ -17,7 +17,7 @@ function StepInputTxt({ value, name, valName, onChange}) {
         value={value}
         name={name}
         onChange={onChange}
-        placeholder={valName}
+        placeholder={inpName}
         required
       />
     </div>
