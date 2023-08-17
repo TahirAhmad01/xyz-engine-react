@@ -1,6 +1,6 @@
 import React from "react";
 import StepInputTxt from "./StepInputTxt";
-import StepBtn from "./stepBtn";
+import StepBtn from "./StepBtn";
 import StepCardLayout from "./StepCardLayout";
 
 function StepOne({ handleStep, stepData, update }) {
