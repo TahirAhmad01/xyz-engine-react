@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import StepInputTxt from "./StepInputTxt";
-import FileDragDrop from "./fileDragDrop";
+import FileDragDrop from "./FileDragDrop";
 import StepCardLayout from "./StepCardLayout";
 
 function StepTwo({ handleStep, stepData, update, setStepData }) {
