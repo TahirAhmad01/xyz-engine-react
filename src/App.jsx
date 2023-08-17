@@ -1,7 +1,34 @@
+import Navbar from "./components/Navbar";
+import { useState } from "react";
+import StepOne from "./components/stepOne";
+import StepTwo from "./components/StepTwo";
+import stepDataObj from "./utils/stepDataObj";
+
 function App() {
+  const [stepOneComplete, setStepOneComplete] = useState(false);
+  const [stepData, setStepData] = useState(stepDataObj);
+  console.log(stepData);
+
   return (
     <>
-      <h1 className="text-3xl font-bold underline">Hello world!</h1>
+      <div className="p-5 min-h-screen bg-gray-100">
+        <Navbar />
+        <div className="h-screen flex justify-center items-center">
+          {!stepOneComplete ? (
+            <StepOne
+              handleStep={setStepOneComplete}
+              stepData={stepData}
+              setStepData={setStepData}
+            />
+          ) : (
+            <StepTwo
+              handleStep={setStepOneComplete}
+              stepData={stepData}
+              setStepData={setStepData}
+            />
+          )}
+        </div>
+      </div>
     </>
   );
 }
