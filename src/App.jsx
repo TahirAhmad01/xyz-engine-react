@@ -5,7 +5,7 @@ import StepTwo from "./components/StepTwo";
 import stepDataObj from "./utils/stepDataObj";
 
 function App() {
-  const [stepOneComplete, setStepOneComplete] = useState(true);
+  const [stepOneComplete, setStepOneComplete] = useState(false);
   const [stepData, setStepData] = useState(stepDataObj);
 
   console.log(stepData);

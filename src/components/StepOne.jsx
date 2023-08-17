@@ -1,6 +1,7 @@
 import React from "react";
 import StepInputTxt from "./StepInputTxt";
 import StepBtn from "./stepBtn";
+import StepCardLayout from "./StepCardLayout";
 
 function StepOne({ handleStep, stepData, update }) {
   const handleSubmit = (e) => {
@@ -9,8 +10,7 @@ function StepOne({ handleStep, stepData, update }) {
   };
 
   return (
-    <div className="w-[600px] bg-red-200 rounded-lg overflow-hidden shadow-md">
-      <div className="p-3 w-full bg-blue-600 text-white">Step 1</div>
+    <StepCardLayout title="Step 1">
       <form onSubmit={handleSubmit}>
         <div className="bg-white p-3 ">
           <StepInputTxt
@@ -42,7 +42,7 @@ function StepOne({ handleStep, stepData, update }) {
           </div>{" "}
         </div>
       </form>
-    </div>
+    </StepCardLayout>
   );
 }
 

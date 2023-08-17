@@ -1,13 +1,13 @@
 import React, { useCallback, useState } from "react";
 import { useDropzone } from "react-dropzone";
 
-export default function FileDragDrop({ setOutputVal }) {
+export default function FileDragDrop({ setOutputVal, setFileUploaded }) {
   const [wrongFile, setWrongFile] = useState(false);
   const [fileName, setFileName] = useState("");
 
   const onDrop = useCallback(async (acceptedFiles) => {
     if (acceptedFiles?.length > 0) {
-      console.log(acceptedFiles);
+      setFileUploaded(true);
       setFileName(acceptedFiles[0].name);
 
       const file = acceptedFiles[0];
