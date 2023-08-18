@@ -24,7 +24,7 @@ export default function FileDragDrop({ setOutputVal, setFileUploaded }) {
     } else {
       setWrongFile(true);
     }
-    console.log(acceptedFiles);
+    // console.log(acceptedFiles);
     // eslint-disable-next-line no-use-before-define, react-hooks/exhaustive-deps
   }, []);
 

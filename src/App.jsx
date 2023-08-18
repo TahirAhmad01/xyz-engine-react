@@ -15,7 +15,7 @@ function App() {
 
   const updateInp = (e) => {
     const { value, name } = e.target;
-    console.log(name);
+    // console.log(name);
 
     setStepData({
       ...stepData,

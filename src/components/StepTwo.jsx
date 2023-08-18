@@ -13,6 +13,7 @@ function StepTwo({
 }) {
   const [outPutVal, setOutputVal] = useState([]);
   const [fileUploaded, setFileUploaded] = useState(false);
+  const [error, setError] = useState("");
 
   useEffect(() => {
     const filterArr = outPutVal.filter((subArray) => subArray.length > 2);
@@ -58,7 +59,17 @@ function StepTwo({
   function handleStepTwo(e) {
     // handleStep(true);
     e.preventDefault();
-    setStepCompleted(true);
+
+    if (Number(stepData.max_x) < Number(stepData.min_x)) {
+      setError("Min X values are grater than Max X values");
+    } else if (Number(stepData.max_y) < Number(stepData.min_y)) {
+      setError("Min Y values are grater than Max Y values");
+    } else if (Number(stepData.max_z) < Number(stepData.min_z)) {
+      setError("Min Z values are grater than Max Z values");
+    } else {
+      setError("");
+      setStepCompleted(true);
+    }
   }
 
   return (
@@ -106,12 +117,15 @@ function StepTwo({
           />
           <StepInputTxt
             name="min_z"
-            inpName="Max Z"
+            inpName="Min Z"
             value={stepData.min_z}
             onChange={update}
             type="number"
           />
         </div>
+        {error !== "" && (
+          <div className="text-red-500 text-center py-2 font-semibold">{error}</div>
+        )}
         <div className="pt-5 text-end">
           <StepBtn name="Back" onClick={backStep} />
           <StepBtn name="Submit" />
