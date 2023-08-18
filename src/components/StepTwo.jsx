@@ -3,7 +3,13 @@ import StepInputTxt from "./StepInputTxt";
 import FileDragDrop from "./FileDragDrop";
 import StepCardLayout from "./StepCardLayout";
 
-function StepTwo({ handleStep, stepData, update, setStepData }) {
+function StepTwo({
+  handleStep,
+  stepData,
+  update,
+  setStepData,
+  setStepCompleted,
+}) {
   const [outPutVal, setOutputVal] = useState([]);
   const [fileUploaded, setFileUploaded] = useState(false);
 
@@ -48,9 +54,15 @@ function StepTwo({ handleStep, stepData, update, setStepData }) {
     handleStep(false);
   }
 
+  function handleStepTwo(e) {
+    // handleStep(true);
+    e.preventDefault();
+    setStepCompleted(true);
+  }
+
   return (
     <StepCardLayout title="Step 2">
-      
+      <form onSubmit={handleStepTwo}>
         <FileDragDrop
           setOutputVal={setOutputVal}
           setFileUploaded={setFileUploaded}
@@ -99,6 +111,7 @@ function StepTwo({ handleStep, stepData, update, setStepData }) {
           </button>
           <button className="py-3 px-9 rounded-md border">Submit</button>
         </div>{" "}
+      </form>
     </StepCardLayout>
   );
 }
