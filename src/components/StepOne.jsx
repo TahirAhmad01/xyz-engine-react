@@ -27,7 +27,7 @@ function StepOne({ handleStep, stepData, update }) {
           />
           <StepInputTxt
             name="client"
-            inpName="client"
+            inpName="Client"
             value={stepData.client}
             onChange={update}
           />

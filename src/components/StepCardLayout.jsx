@@ -2,8 +2,8 @@ import React from "react";
 
 function StepCardLayout({ children, title }) {
   return (
-    <div className="w-[600px] bg-red-200 rounded-lg overflow-hidden shadow-md">
-      <div className="p-3 w-full bg-blue-600 text-white">{title}</div>
+    <div className="w-full md:w-[600px] bg-red-200 rounded-lg overflow-hidden shadow-md">
+      <div className="px-5 py-4 w-full bg-green-500 text-white font-semibold text-md capitalize">{title}</div>
       <div className="bg-white p-3 ">{children}</div>
     </div>
   );

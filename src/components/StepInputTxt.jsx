@@ -13,7 +13,7 @@ function StepInputTxt({ value, name, inpName, onChange}) {
       </label>
       <input
         type="text"
-        className="w-full p-2 rounded-md border border-gray-300"
+        className="w-full p-2 rounded-md border border-gray-300 focus:border-green-300"
         value={value}
         name={name}
         onChange={onChange}

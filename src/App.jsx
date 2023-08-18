@@ -48,14 +48,12 @@ function App() {
   }
 
   return (
-    <>
-      <div className="p-5 min-h-screen bg-gray-100">
-        <Navbar />
-        <div className="h-screen flex justify-center items-center">
-          {content}
-        </div>
+    <div className="bg-gray-50 min-h-screen">
+      <Navbar />
+      <div className="p-5 min-h-[calc(100vh-5rem)] mt-3 md:flex md:justify-center md:items-center overflow-hidden">
+        {content}
       </div>
-    </>
+    </div>
   );
 }
 

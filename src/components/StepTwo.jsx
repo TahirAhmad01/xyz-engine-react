@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import StepInputTxt from "./StepInputTxt";
 import FileDragDrop from "./FileDragDrop";
 import StepCardLayout from "./StepCardLayout";
+import StepBtn from "./StepBtn";
 
 function StepTwo({
   handleStep,
@@ -106,10 +107,8 @@ function StepTwo({
           />
         </div>
         <div className="pt-5 text-end">
-          <button className="py-3 px-9 rounded-md border" onClick={backStep}>
-            Back
-          </button>
-          <button className="py-3 px-9 rounded-md border">Submit</button>
+          <StepBtn name="Back" onClick={backStep} />
+          <StepBtn name="Submit" />
         </div>{" "}
       </form>
     </StepCardLayout>
