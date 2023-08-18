@@ -33,13 +33,21 @@ function App() {
     );
   } else if (stepOneComplete && !stepCompleted) {
     content = (
-      <StepTwo
-        handleStep={setStepOneComplete}
-        stepData={stepData}
-        update={updateInp}
-        setStepData={setStepData}
-        setStepCompleted={setStepCompleted}
-      />
+      <div className="flex flex-col gap-3">
+        <StepOne
+          handleStep={setStepOneComplete}
+          stepData={stepData}
+          update={updateInp}
+          stepOneComplete={stepOneComplete}
+        />
+        <StepTwo
+          handleStep={setStepOneComplete}
+          stepData={stepData}
+          update={updateInp}
+          setStepData={setStepData}
+          setStepCompleted={setStepCompleted}
+        />
+      </div>
     );
   } else if (stepOneComplete && stepCompleted) {
     content = <Result stepData={stepData} />;

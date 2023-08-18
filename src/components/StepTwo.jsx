@@ -27,7 +27,7 @@ function StepTwo({
             };
           });
 
-          console.log(coordinates.filter((item) => item === !isNaN(item)));
+          // console.log(coordinates.filter((item) => item === !isNaN(item)));
 
           const maxX = Math.max(...coordinates.map((coord) => coord.x));
           const minX = Math.min(...coordinates.map((coord) => coord.x));
@@ -74,36 +74,42 @@ function StepTwo({
             inpName="max X"
             value={stepData.max_x}
             onChange={update}
+            type="number"
           />
           <StepInputTxt
             name="min_x"
             inpName="Min X"
             value={stepData.min_x}
             onChange={update}
+            type="number"
           />
           <StepInputTxt
             name="max_y"
             inpName="Max Y"
             value={stepData.max_y}
             onChange={update}
+            type="number"
           />
           <StepInputTxt
             name="min_y"
             inpName="Min Y"
             value={stepData.min_y}
             onChange={update}
+            type="number"
           />
           <StepInputTxt
             name="max_z"
             inpName="Max Z"
             value={stepData.max_z}
             onChange={update}
+            type="number"
           />
           <StepInputTxt
             name="min_z"
             inpName="Max Z"
             value={stepData.min_z}
             onChange={update}
+            type="number"
           />
         </div>
         <div className="pt-5 text-end">

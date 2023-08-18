@@ -3,7 +3,7 @@ import StepInputTxt from "./StepInputTxt";
 import StepBtn from "./StepBtn";
 import StepCardLayout from "./StepCardLayout";
 
-function StepOne({ handleStep, stepData, update }) {
+function StepOne({ handleStep, stepData, update, stepOneComplete }) {
   const handleSubmit = (e) => {
     e.preventDefault();
     handleStep(true);
@@ -18,28 +18,38 @@ function StepOne({ handleStep, stepData, update }) {
             inpName="Project Name"
             value={stepData.projectName}
             onChange={update}
+            disabled={stepOneComplete}
+            className={stepOneComplete && "text-gray-500"}
           />
           <StepInputTxt
             name="projectDes"
             inpName="Project Description"
             value={stepData.projectDes}
             onChange={update}
+            disabled={stepOneComplete}
+            className={stepOneComplete && "text-gray-500"}
           />
           <StepInputTxt
             name="client"
             inpName="Client"
             value={stepData.client}
             onChange={update}
+            disabled={stepOneComplete}
+            className={stepOneComplete && "text-gray-500"}
           />
           <StepInputTxt
             name="contractor"
             inpName="Contractor"
             value={stepData.contractor}
             onChange={update}
+            disabled={stepOneComplete}
+            className={stepOneComplete && "text-gray-500"}
           />
-          <div className="pt-5 text-end">
-            <StepBtn name="Next" />
-          </div>{" "}
+          {!stepOneComplete && (
+            <div className="pt-5 text-end">
+              <StepBtn name="Next" />
+            </div>
+          )}
         </div>
       </form>
     </StepCardLayout>
