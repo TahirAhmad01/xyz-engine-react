@@ -1,6 +1,5 @@
 import React from "react";
 import StepCardLayout from "./StepCardLayout";
-import { PDFViewer, Document, Page, Text } from "@react-pdf/renderer";
 import PdfGenerator from "./PdfGenarator";
 import ResultTable from "./ResultTable";
 
