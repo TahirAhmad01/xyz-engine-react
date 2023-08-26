@@ -5,6 +5,7 @@ function StepInputTxt({
   name,
   type,
   inpName,
+  placeholder,
   onChange,
   className,
   ...rest
@@ -23,7 +24,7 @@ function StepInputTxt({
         value={value}
         name={name}
         onChange={onChange}
-        placeholder={inpName}
+        placeholder={placeholder || inpName}
         required
         {...rest}
       />

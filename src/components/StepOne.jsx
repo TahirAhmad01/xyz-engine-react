@@ -16,6 +16,7 @@ function StepOne({ handleStep, stepData, update, stepOneComplete }) {
           <StepInputTxt
             name="projectName"
             inpName="Project Name"
+            placeholder="Example Project"
             value={stepData.projectName}
             onChange={update}
             disabled={stepOneComplete}
@@ -24,6 +25,7 @@ function StepOne({ handleStep, stepData, update, stepOneComplete }) {
           <StepInputTxt
             name="projectDes"
             inpName="Project Description"
+            placeholder="This is an gas station data ....."
             value={stepData.projectDes}
             onChange={update}
             disabled={stepOneComplete}
@@ -32,6 +34,7 @@ function StepOne({ handleStep, stepData, update, stepOneComplete }) {
           <StepInputTxt
             name="client"
             inpName="Client"
+            placeholder="Mr. Alex"
             value={stepData.client}
             onChange={update}
             disabled={stepOneComplete}
@@ -40,6 +43,7 @@ function StepOne({ handleStep, stepData, update, stepOneComplete }) {
           <StepInputTxt
             name="contractor"
             inpName="Contractor"
+            placeholder="Example inc. ltd."
             value={stepData.contractor}
             onChange={update}
             disabled={stepOneComplete}
